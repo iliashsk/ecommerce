@@ -1,7 +1,7 @@
 import express from 'express';
 import {address,dataForm,createPost,createRating,Weather,Login} from '../controllers/posts.js';
-const router=express.Router();
 
+const router=express.Router();
 
 router.use(function (req, res, next) {
   console.log("Middleware Called");
@@ -14,4 +14,9 @@ router.get("/Home",address);
 router.get("/api", dataForm);
 router.post("/weath", Weather);
 router.post("/login", Login);
+
+/////////////////////////////////Ecommerce router/////////////////////////////
+
+
+
 export default router;
